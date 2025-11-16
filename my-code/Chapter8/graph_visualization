@@ -1,0 +1,18 @@
+
+    digraph G {
+        graph [splines=true];
+        node [fontname="Arial"];
+        edge [penwidth=1.5];
+    "__start__" [label="__start__", shape=ellipse, style=filled, fillcolor=lightblue, width=0.5, height=0.3];"__end__" [label="__end__", shape=ellipse, style=filled, fillcolor=lightblue, width=0.5, height=0.3];"Research Triage Agent" [label="Research Triage Agent", shape=box, style=filled, fillcolor=lightyellow, width=1.5, height=0.8];"Science Manager" [label="Science Manager", shape=box, style=filled, style=rounded, fillcolor=lightyellow, width=1.5, height=0.8];"Physics Agent" [label="Physics Agent", shape=box, style=filled, style=rounded, fillcolor=lightyellow, width=1.5, height=0.8];"calculate_physics_equation" [label="calculate_physics_equation", shape=ellipse, style=filled, fillcolor=lightgreen, width=0.5, height=0.3];"Chemistry Agent" [label="Chemistry Agent", shape=box, style=filled, style=rounded, fillcolor=lightyellow, width=1.5, height=0.8];"Medical Agent" [label="Medical Agent", shape=box, style=filled, style=rounded, fillcolor=lightyellow, width=1.5, height=0.8];"History Manager" [label="History Manager", shape=box, style=filled, style=rounded, fillcolor=lightyellow, width=1.5, height=0.8];"Politics Agent" [label="Politics Agent", shape=box, style=filled, style=rounded, fillcolor=lightyellow, width=1.5, height=0.8];"Warfare Agent" [label="Warfare Agent", shape=box, style=filled, style=rounded, fillcolor=lightyellow, width=1.5, height=0.8];"Culture Agent" [label="Culture Agent", shape=box, style=filled, style=rounded, fillcolor=lightyellow, width=1.5, height=0.8];"perform_culture_survey" [label="perform_culture_survey", shape=ellipse, style=filled, fillcolor=lightgreen, width=0.5, height=0.3];"__start__" -> "Research Triage Agent";
+            "Research Triage Agent" -> "Science Manager";
+            "Science Manager" -> "Physics Agent";
+        "Physics Agent" -> "calculate_physics_equation" [style=dotted, penwidth=1.5];
+        "calculate_physics_equation" -> "Physics Agent" [style=dotted, penwidth=1.5];"Physics Agent" -> "__end__";
+            "Science Manager" -> "Chemistry Agent";"Chemistry Agent" -> "__end__";
+            "Science Manager" -> "Medical Agent";"Medical Agent" -> "__end__";
+            "Research Triage Agent" -> "History Manager";
+            "History Manager" -> "Politics Agent";"Politics Agent" -> "__end__";
+            "History Manager" -> "Warfare Agent";"Warfare Agent" -> "__end__";
+            "History Manager" -> "Culture Agent";
+        "Culture Agent" -> "perform_culture_survey" [style=dotted, penwidth=1.5];
+        "perform_culture_survey" -> "Culture Agent" [style=dotted, penwidth=1.5];"Culture Agent" -> "__end__";}
